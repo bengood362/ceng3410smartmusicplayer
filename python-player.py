@@ -124,4 +124,8 @@ def update_emotion():
 def list_dir():
     return player.list_dir()
 
-app.run("0.0.0.0", "8080")
+@app.route("/get_flags")
+def get_flags():
+    return player.get_flags()
+
+app.run("0.0.0.0", 8080)
